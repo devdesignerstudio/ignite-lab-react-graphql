@@ -21,7 +21,7 @@ const availableDateFormatted = format(props.availableAt, "EEEE'  •  'd' de 'MM
 const isActiveLesson = slug === props.slug;
 
   return (
-    <Link to={`/event/lesson/${props.slug}`} className='group'>
+    <Link to={`/event/lesson/${props.slug}`} className={`group ${!isLessonAvailable ? 'pointer-events-none ' : ' '} `}>
       <span className="text-gray-300">
        {availableDateFormatted}
         </span>
